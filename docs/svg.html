@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG overlay demo</title>
+        
+        <style>
+          #openseadragon {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="openseadragon"></div>
+
+        <script src='openseadragon.min.js'></script>
+        
+        <script>
+        
+          var viewer = OpenSeadragon({
+              id:              "openseadragon",
+              prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
+              tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/NeuN_s4gl4s5_10x/NeuN_s4gl4s5_10x.xml"
+          });
+          
+          var svg_overlay = document.createElement("div");
+          svg_overlay.id = "svg-overlay";
+          	
+          viewer.addOverlay({
+                  element: svg_overlay,
+                  location: new OpenSeadragon.Rect(0, 0, 1, 1)
+          });
+          	
+          fetch("https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Annotation_for_NeuN_s4gl4s5_10x.svg")
+                  .then(r => r.text())
+                          .then(text => svg_overlay.innerHTML = text);
+            
+        </script>
+    </body>
+</html>
