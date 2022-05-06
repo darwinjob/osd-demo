@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="../openseadragon/openseadragon.min.js"></script>
+<title>Triple viewer demo</title>
+<script src="openseadragon.min.js"></script>
 <style type="text/css">
 .seadragon-viewer {
 	display: inline-block;
@@ -15,27 +15,14 @@
 
 var viewer1 = OpenSeadragon({
         id: "viewer1",
-        prefixUrl: "../openseadragon/images/",
-        tileSources: "../feeder/openseadragon/?id=13375"
-    });
-	
-	var svg_overlay1 = document.createElement("div");
-    svg_overlay1.id = "svg-overlay1";
-	
-	viewer1.addOverlay({
-		element: svg_overlay1,
-        location: new OpenSeadragon.Rect(0, 0, 1, 1)
-    });
-	
-	fetch("../feeder/original/?id=13658")
-		.then(r => r.text())
-			.then(text => svg_overlay.innerHTML = text);
-			
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Calb_s3gl4s5_10x/Calb_s3gl4s5_10x.xml"
+    });		
 
 var viewer2 = OpenSeadragon({
         id: "viewer2",
-        prefixUrl: "../openseadragon/images/",
-        tileSources: "../feeder/openseadragon/?id=13375"
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/NeuN_s4gl4s5_10x/NeuN_s4gl4s5_10x.xml"
     });
 	
 	var svg_overlay2 = document.createElement("div");
@@ -46,29 +33,16 @@ var viewer2 = OpenSeadragon({
         location: new OpenSeadragon.Rect(0, 0, 1, 1)
     });
 	
-	fetch("../feeder/original/?id=13658")
+	fetch("https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Annotation_for_NeuN_s4gl4s5_10x.svg")
 		.then(r => r.text())
 			.then(text => svg_overlay.innerHTML = text);
 			
 			
 var viewer3 = OpenSeadragon({
         id: "viewer3",
-        prefixUrl: "../openseadragon/images/",
-        tileSources: "../feeder/openseadragon/?id=13375"
-    });
-	
-	var svg_overlay3 = document.createElement("div");
-    svg_overlay.id = "svg-overlay3";
-	
-	viewer3.addOverlay({
-		element: svg_overlay3,
-        location: new OpenSeadragon.Rect(0, 0, 1, 1)
-    });
-	
-	fetch("../feeder/original/?id=13658")
-		.then(r => r.text())
-			.then(text => svg_overlay.innerHTML = text);
-			
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml"
+    });		
 			
 var viewer1Leading = false;
 var viewer2Leading = false;
