@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../openseadragon/openseadragon.min.js"></script>
+<style type="text/css">
+.seadragon-viewer {
+	display: inline-block;
+	width: 33%;
+	height: 600px;
+}
+</style>
+<script type="text/javascript">
+
+var viewer1 = OpenSeadragon({
+        id: "viewer1",
+        prefixUrl: "../openseadragon/images/",
+        tileSources: "../feeder/openseadragon/?id=13375"
+    });
+	
+	var svg_overlay1 = document.createElement("div");
+    svg_overlay1.id = "svg-overlay1";
+	
+	viewer1.addOverlay({
+		element: svg_overlay1,
+        location: new OpenSeadragon.Rect(0, 0, 1, 1)
+    });
+	
+	fetch("../feeder/original/?id=13658")
+		.then(r => r.text())
+			.then(text => svg_overlay.innerHTML = text);
+			
+
+var viewer2 = OpenSeadragon({
+        id: "viewer2",
+        prefixUrl: "../openseadragon/images/",
+        tileSources: "../feeder/openseadragon/?id=13375"
+    });
+	
+	var svg_overlay2 = document.createElement("div");
+    svg_overlay2.id = "svg-overlay2";
+	
+	viewer2.addOverlay({
+		element: svg_overlay2,
+        location: new OpenSeadragon.Rect(0, 0, 1, 1)
+    });
+	
+	fetch("../feeder/original/?id=13658")
+		.then(r => r.text())
+			.then(text => svg_overlay.innerHTML = text);
+			
+			
+var viewer3 = OpenSeadragon({
+        id: "viewer3",
+        prefixUrl: "../openseadragon/images/",
+        tileSources: "../feeder/openseadragon/?id=13375"
+    });
+	
+	var svg_overlay3 = document.createElement("div");
+    svg_overlay.id = "svg-overlay3";
+	
+	viewer3.addOverlay({
+		element: svg_overlay3,
+        location: new OpenSeadragon.Rect(0, 0, 1, 1)
+    });
+	
+	fetch("../feeder/original/?id=13658")
+		.then(r => r.text())
+			.then(text => svg_overlay.innerHTML = text);
+			
+			
+var viewer1Leading = false;
+var viewer2Leading = false;
+var viewer3Leading = false;
+
+var viewer1Handler = function() {
+  if (viewer2Leading||viewer3Leading) {
+    return;
+  }
+
+  viewer1Leading = true;
+  viewer2.viewport.zoomTo(viewer1.viewport.getZoom());
+  viewer2.viewport.panTo(viewer1.viewport.getCenter());
+  viewer3.viewport.zoomTo(viewer1.viewport.getZoom());
+  viewer3.viewport.panTo(viewer1.viewport.getCenter());
+  viewer1Leading = false;
+};
+
+var viewer2Handler = function() {
+  if (viewer1Leading||viewer3Leading) {
+    return;
+  }
+
+  viewer2Leading = true;
+  viewer1.viewport.zoomTo(viewer2.viewport.getZoom());
+  viewer1.viewport.panTo(viewer2.viewport.getCenter());
+  viewer3.viewport.zoomTo(viewer2.viewport.getZoom());
+  viewer3.viewport.panTo(viewer2.viewport.getCenter());
+  viewer2Leading = false;
+};
+
+var viewer3Handler = function() {
+  if (viewer1Leading||viewer2Leading) {
+    return;
+  }
+
+  viewer3Leading = true;
+  viewer1.viewport.zoomTo(viewer3.viewport.getZoom());
+  viewer1.viewport.panTo(viewer3.viewport.getCenter());
+  viewer2.viewport.zoomTo(viewer3.viewport.getZoom());
+  viewer2.viewport.panTo(viewer3.viewport.getCenter());
+  viewer3Leading = false;
+};
+
+viewer1.addHandler('zoom', viewer1Handler);
+viewer2.addHandler('zoom', viewer2Handler);
+viewer3.addHandler('zoom', viewer3Handler);
+
+viewer1.addHandler('pan', viewer1Handler);
+viewer2.addHandler('pan', viewer2Handler);
+viewer3.addHandler('pan', viewer3Handler);
+
+									
+</script>
+
+</head>
+<body>
+	<div id="viewer1" class="seadragon-viewer" />
+	<div id="viewer2" class="seadragon-viewer" />
+	<div id="viewer3" class="seadragon-viewer" />
+</body>
+</html>
