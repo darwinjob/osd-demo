@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Triple viewer demo</title>
+<title>Insert title here</title>
 <script src="openseadragon.min.js"></script>
 <style type="text/css">
 body {
@@ -16,14 +16,12 @@ body {
 </style>
 <script type="text/javascript">
 window.onload = function() {
-
 var viewer1 = OpenSeadragon({
         id: "viewer1",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
         tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Calb_s3gl4s5_10x/Calb_s3gl4s5_10x.xml"
-    });		
+    });
 
-	
 var viewer2 = OpenSeadragon({
         id: "viewer2",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
@@ -47,8 +45,9 @@ var viewer3 = OpenSeadragon({
         id: "viewer3",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
         tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml"
-    });		
-			
+    });
+	
+	
 var viewer1Leading = false;
 var viewer2Leading = false;
 var viewer3Leading = false;
@@ -99,13 +98,14 @@ viewer3.addHandler('zoom', viewer3Handler);
 viewer1.addHandler('pan', viewer1Handler);
 viewer2.addHandler('pan', viewer2Handler);
 viewer3.addHandler('pan', viewer3Handler);
-};									
+};
+									
 </script>
 
 </head>
 <body>
-	<div id="viewer1" class="seadragon-viewer" />
-	<div id="viewer2" class="seadragon-viewer" />
-	<div id="viewer3" class="seadragon-viewer" />
+	<div id="viewer1" class="seadragon-viewer"></div>
+	<div id="viewer2" class="seadragon-viewer"></div>
+	<div id="viewer3" class="seadragon-viewer"></div>
 </body>
 </html>
