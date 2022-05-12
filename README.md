@@ -16,11 +16,11 @@ https://darwinjob.github.io/osd-demo/rotation.html
 
 https://darwinjob.github.io/osd-demo/triple.html
 ## RGB channels separation
-Based on the filters plugin.
+Based on the filters plugin. Under development.
 
 https://darwinjob.github.io/osd-demo/RGB_channels.html
 ## Overlayed images
-2 or more images overlayed. 
+2 or more images overlayed. Under development. 
 
 https://darwinjob.github.io/osd-demo/overlay.html
 ## NIST filters demo applied to an histology image
