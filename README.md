@@ -25,4 +25,6 @@ https://darwinjob.github.io/osd-demo/RGB_channels.html
 https://darwinjob.github.io/osd-demo/overlay.html
 ## NIST filters demo applied to an histology image
 Try Brightness, Contrast, Exposure, Gamma, Grayscale, Invert and **Thresholding** as the example.
+
 https://darwinjob.github.io/OpenSeadragonFiltering/
+![](resources/thresh.png)
