@@ -18,11 +18,11 @@ https://darwinjob.github.io/osd-demo/triple.html
 ## RGB channels separation
 Based on the filters plugin.
 
-https://darwinjob.github.io/osd-demo/triple_channels.html
+https://darwinjob.github.io/osd-demo/RGB_channels.html
 ## Overlayed images
 2 or more images overlayed. 
 
 https://darwinjob.github.io/osd-demo/overlay.html
 ## NIST filters demo applied to an histology image
-
-https://darwinjob.github.io/osd-demo/filters.html
+Very few filters here are relevant. Try Thresholding, Invert and Brightness for example.
+https://darwinjob.github.io/OpenSeadragonFiltering/
