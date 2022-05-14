@@ -26,9 +26,13 @@ Based on the filters plugin.
 https://darwinjob.github.io/osd-demo/RGB_channels.html
 ![](resources/RGB.png)
 ## Overlayed images
-2 or more images overlayed. Under development. 
+2 or more images combined and overlayed. **Under development**. 
 
-https://darwinjob.github.io/osd-demo/overlay.html
+https://darwinjob.github.io/osd-demo/multi-image-overlay.html
+## PNG overlay
+PNG on top of an image. **Under development**. 
+
+https://darwinjob.github.io/osd-demo/PNG-overlay.html
 ## NIST filters demo applied to an histology image
 Try Brightness, Contrast, Exposure, Gamma, Grayscale, Invert and **Thresholding** as the example.
 
