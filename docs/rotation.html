@@ -3,38 +3,47 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Rotation demo (requires touch screen)</title>
+        <title>Rotation demo</title>
         
         <style>
           #openseadragon {
-              position: absolute;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
+          	position: absolute;
+            top: 50px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          
+          #rotationSlider {
+          	width: 100%;
+          	height: 50px;
           }
         </style>
+        
     </head>
     <body>
-        <div id="openseadragon"></div>
+    
+    <div id="openseadragon"></div>
+	<input type="range" min="-180" max="180" value="0" id="rotationSlider">
 
-        <script src='openseadragon.min.js'></script>
-        
-        <script>
-        
-          var viewer = OpenSeadragon({
-              id:              "openseadragon",
-              prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
-              tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/NeuN_s4gl4s5_10x/NeuN_s4gl4s5_10x.xml",
-              showRotationControl: true,
-              // Enable touch rotation on tactile devices
-              gestureSettingsTouch: {
-            	  pinchRotate: true
-              }
-          });
-          
-          
-            
+	<script src='openseadragon.min.js'></script>
+    <script>
+    	var viewer = OpenSeadragon({
+    		id:              "openseadragon",
+    		prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
+    		tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/NeuN_s4gl4s5_10x/NeuN_s4gl4s5_10x.xml",
+    		showRotationControl: true,
+    		// Enable touch rotation on tactile devices
+    		gestureSettingsTouch: {
+    			pinchRotate: true
+    		}
+    	});
+    	
+    	var slider = document.getElementById("rotationSlider");
+    	slider.oninput = function() {
+    		viewer.viewport.setRotation(slider.value);	
+    	}
+    	              
         </script>
     </body>
 </html>
