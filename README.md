@@ -3,6 +3,7 @@
 Classical scale bar. Requires resolution metadata.
 
 https://darwinjob.github.io/osd-demo/scalebar.html
+
 ![](resources/scalebar.png)
 ## Image annotations
 SVG drawing on top of an image. 
