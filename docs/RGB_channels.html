@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>RGB channels viewer demo</title>
 <script src="openseadragon.min.js"></script>
+<script src="openseadragon-filtering.js"></script>
+
 <style type="text/css">
 body {
     min-width: fit-content;
@@ -22,17 +24,41 @@ var viewer1 = OpenSeadragon({
         tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml"
     });
 
+viewer1.setFilterOptions({
+    filters: {
+        processors: [
+            OpenSeadragon.Filters.RED_CHANNEL()
+        ]
+    }
+});
+
 var viewer2 = OpenSeadragon({
         id: "viewer2",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
         tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml"
     });		
+    
+viewer2.setFilterOptions({
+    filters: {
+        processors: [
+            OpenSeadragon.Filters.GREEN_CHANNEL()
+        ]
+    }
+});
 			
 var viewer3 = OpenSeadragon({
         id: "viewer3",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
         tileSources: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml"
     });
+    
+viewer3.setFilterOptions({
+    filters: {
+        processors: [
+            OpenSeadragon.Filters.BLUE_CHANNEL()
+        ]
+    }
+});
 	
 	
 var viewer1Leading = false;

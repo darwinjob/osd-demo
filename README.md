@@ -16,7 +16,7 @@ https://darwinjob.github.io/osd-demo/rotation.html
 
 https://darwinjob.github.io/osd-demo/triple.html
 ## RGB channels separation
-Based on the filters plugin. Under development.
+Based on the filters plugin.
 
 https://darwinjob.github.io/osd-demo/RGB_channels.html
 ## Overlayed images
