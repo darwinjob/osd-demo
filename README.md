@@ -3,18 +3,22 @@
 Classical scale bar. Requires resolution metadata.
 
 https://darwinjob.github.io/osd-demo/scalebar.html
+![](resources/scalebar.png)
 ## Image annotations
 SVG drawing on top of an image. 
 
 https://darwinjob.github.io/osd-demo/svg.html
+![](resources/svg_annotations.png)
 ## Image rotation
 Use two fingers pinch on touch screen devices. Or the slider on the top.
 
 https://darwinjob.github.io/osd-demo/rotation.html
+![](resources/rotated.png)
 ## Synchronized triple image viewer
 3 synchronized image viewers. The number of viewers is virtually unlimited. 
 
 https://darwinjob.github.io/osd-demo/triple.html
+![](resources/RGB.png)
 ## RGB channels separation
 Based on the filters plugin.
 
