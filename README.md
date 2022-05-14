@@ -19,11 +19,12 @@ https://darwinjob.github.io/osd-demo/rotation.html
 3 synchronized image viewers. The number of viewers is virtually unlimited. 
 
 https://darwinjob.github.io/osd-demo/triple.html
-![](resources/RGB.png)
+![](resources/triple.png)
 ## RGB channels separation
 Based on the filters plugin.
 
 https://darwinjob.github.io/osd-demo/RGB_channels.html
+![](resources/RGB.png)
 ## Overlayed images
 2 or more images overlayed. Under development. 
 
