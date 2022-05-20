@@ -32,7 +32,7 @@ https://darwinjob.github.io/osd-demo/multi-image-overlay.html
 ## PNG overlay
 PNG on top of an image. Zoom in and push the toggle button 
 
-https://darwinjob.github.io/osd-demo/PNG-overlay.html
+https://darwinjob.github.io/osd-demo/PNG_overlay.html
 ![](resources/PNG-overlay.png)
 ## NIST filters demo applied to an histology image
 Try Brightness, Contrast, Exposure, Gamma, Grayscale, Invert and **Thresholding** as the example.
