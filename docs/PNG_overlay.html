@@ -22,18 +22,7 @@
         
         <script>
         
-        var img = document.createElement("img");
-        img.id = "png-overlay"
-        img.src = "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/2877_NOP_tTA_lacZ_Xgal_resize_Simple_Seg_s028_alpha.png";
-        var overlay = false;
-        
-        var viewer = OpenSeadragon({
-        	id:              "openseadragon",
-            prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
-            tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/2877_NOP_tTA_lacZ_Xgal_s028/2877_NOP_tTA_lacZ_Xgal_s028.dzi"
-        });
-        
-        // Yes, hardcoded for now.
+     // Yes, hardcoded for now.
         const dziWidth = 1;
         const dziHeight = 55305/47801;
         const diceWidth = 9561;
@@ -43,6 +32,22 @@
         const scaleW = dziWidth / diceWidth;
         const overlayWidth = diceWidth * scaleW;
         const overlayHeight = diceHeight * scaleH;
+        
+        var img = document.createElement("img");
+        img.id = "png-overlay"
+        img.src = "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/2877_NOP_tTA_lacZ_Xgal_resize_Simple_Seg_s028_alpha.png"        
+        
+        var viewer = OpenSeadragon({
+        	id:              "openseadragon",
+            prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
+            tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/2877_NOP_tTA_lacZ_Xgal_s028/2877_NOP_tTA_lacZ_Xgal_s028.dzi"
+        });
+        
+        viewer.addOverlay({
+       		element: img,
+       		location: new OpenSeadragon.Rect((dziWidth - overlayWidth) / 2, (dziHeight - overlayHeight) / 2, overlayWidth, overlayHeight)
+       	});
+        var overlay = true;
         
     	var toggleButton = new OpenSeadragon.Button({
         	tooltip: 'Toggle overlay',
