@@ -16,7 +16,7 @@ Use two fingers pinch on touch screen devices. Or the slider on the top.
 https://darwinjob.github.io/osd-demo/rotation.html
 ![](resources/rotated.png)
 ## Synchronized triple image viewer
-3 synchronized image viewers. The number of viewers is virtually unlimited. 
+3 synchronized image viewers. The number of viewers is virtually unlimited. Use cases: [Rat Hippocampus Atlas](https://www.frontiersin.org/articles/10.3389/fninf.2011.00002/full)
 
 https://darwinjob.github.io/osd-demo/triple.html
 ![](resources/triple.png)
@@ -30,7 +30,7 @@ https://darwinjob.github.io/osd-demo/RGB_channels.html
 
 https://darwinjob.github.io/osd-demo/multi-image-overlay.html
 ## PNG overlay
-PNG on top of an image. Zoom in and push the toggle button 
+PNG on top of an image. Zoom in and push the toggle button. Use cases: [LZ](https://github.com/Tevemadar/LocaliZoom) like visualization; displaying ilastik output  
 
 https://darwinjob.github.io/osd-demo/PNG_overlay.html
 ![](resources/PNG-overlay.png)
