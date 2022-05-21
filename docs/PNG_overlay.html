@@ -25,13 +25,13 @@
      // Yes, hardcoded for now.
         const dziWidth = 1;
         const dziHeight = 55305/47801;
-        const diceWidth = 9561;
-        const diceHeight = 11061;
+        const pngWidth = 9561;
+        const pngHeight = 11061;
 
-        const scaleH = dziHeight / diceHeight;
-        const scaleW = dziWidth / diceWidth;
-        const overlayWidth = diceWidth * scaleW;
-        const overlayHeight = diceHeight * scaleH;
+        const scaleHeight = dziHeight / pngHeight;
+        const scaleWidth = dziWidth / pngWidth;
+        const overlayWidth = pngWidth * scaleWidth;
+        const overlayHeight = pngHeight * scaleHeight;
         
         var img = document.createElement("img");
         img.id = "png-overlay"
@@ -43,11 +43,8 @@
             tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/2877_NOP_tTA_lacZ_Xgal_s028/2877_NOP_tTA_lacZ_Xgal_s028.dzi"
         });
         
-        viewer.addOverlay({
-       		element: img,
-       		location: new OpenSeadragon.Rect((dziWidth - overlayWidth) / 2, (dziHeight - overlayHeight) / 2, overlayWidth, overlayHeight)
-       	});
-        var overlay = true;
+        var overlay = false;
+        toggleOverlay();
         
     	var toggleButton = new OpenSeadragon.Button({
         	tooltip: 'Toggle overlay',
@@ -55,20 +52,24 @@
         	srcGroup: 'https://openseadragon.github.io/openseadragon/images/button_grouphover.png',
         	srcHover: 'https://openseadragon.github.io/openseadragon/images/button_hover.png',
         	srcDown: 'https://openseadragon.github.io/openseadragon/images/button_pressed.png',
-        	onClick: function toggleOverlay() {
-        		if (overlay) {
-        			viewer.removeOverlay("png-overlay");
-       	        } else {
-       	        	viewer.addOverlay({
-       	        		element: img,
-       	        		location: new OpenSeadragon.Rect((dziWidth - overlayWidth) / 2, (dziHeight - overlayHeight) / 2, overlayWidth, overlayHeight)
-       	        	});
-       	        }
-        		overlay = !overlay;
-       	    }
+        	onClick: toggleOverlay
     	});
     	
     	viewer.addControl(toggleButton.element, { anchor: OpenSeadragon.ControlAnchor.TOP_LEFT });
+    	
+    	function toggleOverlay() {
+    		if (overlay) {
+    			console.log("Removing " + img);
+    			viewer.removeOverlay("png-overlay");
+   	        } else {
+   	        	console.log("Adding " + img);
+   	        	viewer.addOverlay({
+   	        		element: img,
+   	        		location: new OpenSeadragon.Rect((dziWidth - overlayWidth) / 2, (dziHeight - overlayHeight) / 2, overlayWidth, overlayHeight)
+   	        	});
+   	        }
+    		overlay = !overlay;	
+    	}
    		
         </script>
     </body>
