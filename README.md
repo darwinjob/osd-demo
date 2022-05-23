@@ -1,6 +1,6 @@
 # OpenSeadragon histology imaging demos
 ## Scale bar
-Classical scale bar. Requires resolution metadata.
+Classic scale bar. Requires resolution metadata.
 
 https://darwinjob.github.io/osd-demo/scalebar.html
 
@@ -39,3 +39,14 @@ Try Brightness, Contrast, Exposure, Gamma, Grayscale, Invert and **Thresholding*
 
 https://darwinjob.github.io/OpenSeadragonFiltering/
 ![](resources/thresh.png)
+## Multi-Image viewer
+The viewer is deployed and already in use. Two modes are available.
+### Filmstrip mode
+Classic filmstrip viewer. Use the arrow buttons from the toolbar on the top or the mouse wheel to browse images.
+
+https://miosdv.apps-dev.hbp.eu/index.html?bucket=https://data-proxy.ebrains.eu/api/v1/public/buckets/img-346808ac-46fb-11ec-98bf-50eb718d929d
+![](resources/multi-film.png)
+###Collection mode
+All images displayed as single one. Zoom and pan as usual.
+
+![](resources/multi-collection.png)
