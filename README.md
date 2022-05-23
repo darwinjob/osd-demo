@@ -46,7 +46,7 @@ Classic filmstrip viewer. Use the arrow buttons from the toolbar on the top or t
 
 https://miosdv.apps-dev.hbp.eu/index.html?bucket=https://data-proxy.ebrains.eu/api/v1/public/buckets/img-346808ac-46fb-11ec-98bf-50eb718d929d
 ![](resources/multi-film.png)
-###Collection mode
-All images displayed as single one. Zoom and pan as usual.
+### Collection mode
+All images displayed as a single one. Zoom and pan as usual.
 
 ![](resources/multi-collection.png)
