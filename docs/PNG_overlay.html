@@ -18,7 +18,6 @@
     <body>
         <div id="openseadragon"></div>
         <script src='openseadragon.min.js'></script>
-        <script src="openseadragon-filtering.js"></script>
         
         <script>
         
@@ -32,6 +31,10 @@
         const scaleWidth = dziWidth / pngWidth;
         const overlayWidth = pngWidth * scaleWidth;
         const overlayHeight = pngHeight * scaleHeight;
+     
+        console.log("dziWidth: " + dziWidth + " dziHeight: " + dziHeight + " pngWidth: " + pngWidth + " pngHeight: " + pngHeight);
+        console.log("scaleWidth:" + scaleWidth + ", scaleHeight:" + scaleHeight + ", overlayWidth: " + overlayWidth + ", overlayHeight:" + overlayHeight);
+        console.log("Rectangle: (" + (dziWidth - overlayWidth) / 2 + ", " + (dziHeight - overlayHeight) / 2 + ", " + overlayWidth+ ", " + overlayHeight +")");
         
         var img = document.createElement("img");
         img.id = "png-overlay"
