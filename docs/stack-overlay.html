@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Image overlay demo</title>
+        
+        <style>
+          #openseadragon {
+          	position: absolute;
+            top: 50px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          
+          #opacitySlider {
+          	width: 100%;
+          	height: 50px;
+          }
+        </style>
+        
+    </head>
+    <body>
+    
+    <div id="openseadragon"></div>
+	<input type="range" min="0" max="100" value="50" id="opacitySlider">
+
+	<script src='openseadragon.min.js'></script>
+    <script>
+    	var viewer = OpenSeadragon({
+    		id:              "openseadragon",
+    		prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
+    		tileSources:     [
+    			{
+    				tileSource: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/NeuN_s4gl4s5_10x/NeuN_s4gl4s5_10x.xml"
+    			},
+    			{
+    				tileSource: "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Parv_s5gl4s4_10x/Parv_s5gl4s4_10x.xml",
+    				opacity: .5
+    			}
+   			]
+    	});
+    	
+    	var slider = document.getElementById("opacitySlider");
+    	slider.oninput = function() {
+    		var image1 = viewer.world.getItemAt(1);
+    		image1.setOpacity(slider.value/100);
+    	}
+    	              
+        </script>
+    </body>
+</html>

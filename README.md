@@ -26,9 +26,10 @@ Based on the filters plugin.
 https://darwinjob.github.io/osd-demo/RGB_channels.html
 ![](resources/RGB.png)
 ## Overlayed images
-2 or more images combined and overlayed. **Under development**. 
+2 (or more) images combined and overlayed. Use the slider on the top to adjust the opacity.
 
-https://darwinjob.github.io/osd-demo/multi-image-overlay.html
+https://darwinjob.github.io/osd-demo/stack-overlay.html
+![](resources/stack-overlay.png)
 ## PNG overlay
 PNG on top of an image. Zoom in and push the toggle button. Use cases: [LZ](https://github.com/Tevemadar/LocaliZoom) like visualization; displaying ilastik output  
 
