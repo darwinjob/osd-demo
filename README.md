@@ -6,7 +6,7 @@ https://darwinjob.github.io/osd-demo/scalebar.html
 
 ![](resources/scalebar.png)
 ## Image annotations
-SVG drawing on top of an image. 
+SVG drawing on top of an image. Mouse over and wait for a tooltip to see a region name. 
 
 https://darwinjob.github.io/osd-demo/svg.html
 ![](resources/svg_annotations.png)
