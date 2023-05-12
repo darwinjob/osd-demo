@@ -13,8 +13,7 @@
         <script type="importmap">
             {
                 "imports": {
-                    "three": "https://unpkg.com/three@0.150.0/build/three.module.js",
-                    "three/addons/": "https://unpkg.com/three@0.150.0/examples/jsm/"
+                    "three": "https://unpkg.com/three@0.152.2/build/three.module.js"
                 }
             }
         </script>
@@ -23,7 +22,7 @@
 	<script id="jsbin-javascript" type="module"> 
 		
 	import * as THREE from 'three';	
-    THREE.ImageUtils.crossOrigin = 'anonymous';
+
     var viewer = OpenSeadragon({
         id:              "seadragon-viewer",
         prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
