@@ -48,7 +48,8 @@
 
         texture = new THREE.Texture(viewer.drawer.canvas);
         var material = new THREE.MeshBasicMaterial({ map: texture });
-        geometry = new THREE.PlaneGeometry( 300, 300 );
+	    material.side = THREE.DoubleSide;
+        geometry = new THREE.PlaneGeometry( 21260, 12756 );
         mesh = new THREE.Mesh( geometry, material );
         scene.add( mesh );
 
