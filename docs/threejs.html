@@ -5,7 +5,7 @@
 <title>threejs + OpenSeadragon</title>
 </head>
 <body style="background: #fff;">
-	<div id="seadragon-viewer" style="width: 800px; height: 200px;"></div>
+	<div id="seadragon-viewer" style="width: 212px; height: 127px;"></div>
 	<script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
 
         <script type="importmap">
@@ -49,7 +49,7 @@
         texture = new THREE.Texture(viewer.drawer.canvas);
         var material = new THREE.MeshBasicMaterial({ map: texture });
 	    material.side = THREE.DoubleSide;
-        geometry = new THREE.PlaneGeometry( 21260/10, 12756/10 );
+        geometry = new THREE.PlaneGeometry( 21260/100, 12756/100 );
         mesh = new THREE.Mesh( geometry, material );
         scene.add( mesh );
 
