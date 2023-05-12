@@ -26,7 +26,8 @@
     var viewer = OpenSeadragon({
         id:              "seadragon-viewer",
         prefixUrl:       "https://openseadragon.github.io/openseadragon/images/",
-        tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Calb_s3gl4s5_10x/Calb_s3gl4s5_10x.xml"
+        tileSources:     "https://raw.githubusercontent.com/darwinjob/osd-demo/master/resources/Calb_s3gl4s5_10x/Calb_s3gl4s5_10x.xml",
+	    crossOriginPolicy: "Anonymous"
     });
         
     var width = window.innerWidth, height = window.innerHeight / 2;
